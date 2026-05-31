@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Post — Title Placeholder</title>
+  <style>
+    :root{
+      --paper:#f6f1e6;
+      --card:#fbf8f0;
+      --ink:#221f1a;
+      --muted:#756c5c;
+      --hairline:#ddd3bf;
+      --blue: oklch(0.50 0.06 248);
+      --ochre: oklch(0.52 0.07 66);
+      --readw: 720px;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    body{
+      font-family: Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    .wrap{ max-width: 1000px; margin: 0 auto; padding: 32px 20px; }
+
+    /* Layout separators */
+    .post-shell{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    /* Post head */
+    header.post-header{
+      background: var(--card);
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .post-title{
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 52px);
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .post-meta{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 12px;
+    }
+
+    /* Primary body */
+    .post-body-card{
+      background: var(--card);
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+      padding: 26px;
+    }
+
+    .post-media{
+      margin: 18px 0;
+      padding: 14px;
+      border: 1px dashed var(--hairline);
+      border-radius: 6px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    article.post-content{
+      max-width: var(--readw);
+      margin: 0 auto;
+    }
+
+    /* Comments */
+    section.comments{
+      background: var(--card);
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .comments-title{
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      margin-bottom: 12px;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+
+    .comments-list{
+      padding: 14px;
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      background: #fff;
+      margin-bottom: 18px;
+    }
+
+    .comment{
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .comment:last-child{ border-bottom: none; }
+
+    .comment strong{ color: var(--ink); }
+    .comment .comment-date{ color: var(--muted); font-size: 13px; margin-left: 8px; }
+
+    /* Comment form */
+    form.comment-form{
+      border: 1px dashed var(--hairline);
+      border-radius: 6px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .field{
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .field label{
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .field input, .field textarea{
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 16px;
+      background: transparent;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .actions{
+      display:flex;
+      gap: 12px;
+      align-items:center;
+      flex-wrap: wrap;
+    }
+
+    button{
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    button.secondary{
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--hairline);
+    }
+
+    /* Embedded media */
+    .media-caption{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="post-shell">
+
+      <!-- ================= POST HEADER ================= -->
+      <header class="post-header" aria-label="Post metadata">
+        <!-- Main heading placeholder -->
+        <h1 class="post-title">{{ post.title }}</h1>
+
+        <!-- Metadata section placeholder -->
+        <div class="post-meta">
+          <time class="post-date" datetime="{{ post.publishedISO }}">{{ post.publishedDisplay }}</time>
+          <span aria-hidden="true">·</span>
+          <span class="post-author">By <strong>{{ post.authorName }}</strong></span>
+          <span aria-hidden="true">·</span>
+          <span class="post-reading-time">{{ post.readingTime }}</span>
+        </div>
+      </header>
+
+      <!-- ================= PRIMARY POST CONTENT ================= -->
+      <main class="post-body-card">
+        <article class="post-content" aria-label="Full post content">
+
+          <!-- Optional embedded media placeholder -->
+          <div class="post-media" aria-label="Embedded media placeholder">
+            <!-- Replace with <img>, <figure>, <iframe>, etc. -->
+            <div>Media goes here (image/video/quote embed)</div>
+            <div class="media-caption">{{ post.mediaCaption }}</div>
+          </div>
+
+          <!-- Full body text placeholder -->
+          <section class="post-text" aria-label="Body">
+            {{ post.bodyHtml }}
+          </section>
+
+          <!-- Optional end-of-article divider -->
+          <hr style="border:none;border-top:1px solid var(--hairline);margin:22px 0;" />
+
+          <!-- Optional tags/categorization placeholder -->
+          <section class="post-tags" aria-label="Tags" style="color:var(--muted);font-size:14px;">
+            Tags: {{ post.tags }}
+          </section>
+        </article>
+      </main>
+
+      <!-- ================= COMMENTS + SUBMISSION ================= -->
+      <section class="comments" aria-label="Comments section">
+        <div class="comments-title">
+          <span style="color:var(--ochre);font-weight:800;">●</span>
+          <h2 style="font-size:18px;">Comments</h2>
+          <span style="margin-left:auto;color:var(--muted);font-size:14px;">
+            {{ comments.count }}
+          </span>
+        </div>
+
+        <!-- User comments list placeholder -->
+        <div class="comments-list" role="list" aria-label="List of comments">
+          <div class="comment" role="listitem">
+            <div>
+              <strong>{{ comment.author }}</strong>
+              <span class="comment-date">{{ comment.dateDisplay }}</span>
+            </div>
+            <p style="margin-top:8px;">{{ comment.body }}</p>
+          </div>
+          <!-- Repeat .comment for each comment -->
+        </div>
+
+        <!-- Separate submission form placeholder -->
+        <form class="comment-form" action="{{ comments.submitUrl }}" method="post" aria-label="Submit a comment">
+          <div class="field">
+            <label for="commentName">Name</label>
+            <input id="commentName" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="commentEmail">Email</label>
+            <input id="commentEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="commentBody">Comment</label>
+            <textarea id="commentBody" name="body" rows="5" placeholder="Write your comment…" required></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Submit comment</button>
+            <button type="reset" class="secondary">Reset</button>
+          </div>
+
+          <p style="margin-top:12px;color:var(--muted);font-size:14px;">
+            {{ comments.formNote }}
+          </p>
+        </form>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
+

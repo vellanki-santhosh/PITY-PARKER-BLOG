@@ -1,0 +1,81 @@
+/* ============================================================
+   Pity Parker — blog content imported from pityparker.blogspot.com
+   Two most-recent pieces are included in full; older pieces are
+   listed with their opening and link to the original (full text
+   being migrated in).
+   ============================================================ */
+window.PP_SEED = [
+
+  {
+    id: "post_maggot_2025",
+    title: "The Maggot-Eaten Truth About India's Compassion: A Nation's Complicity in Slow Murder",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2025, 9, 19),
+    source: "https://pityparker.blogspot.com/2025/10/the-maggot-eaten-truth-about-indias.html",
+
+  {
+    id: "post_obituary_2024",
+    title: "\"A\" Obituary to my \"Ex-Relatives\"",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2024, 10, 18),
+    source: "https://pityparker.blogspot.com/2024/11/a-obituary-to-relatives-some-people.html",
+
+  {
+    id: "post_copywriting_2024",
+    title: "Creative Writing Vs Copywriting: Between the Art and Science",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2024, 6, 5),
+    source: "https://pityparker.blogspot.com/2024/07/creative-writing-vs-copywriting-between.html",
+
+  {
+    id: "post_esl_2022",
+    title: "ESL Classroom: Learners' Perceptions",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2022, 6, 24),
+    source: "https://pityparker.blogspot.com/2022/07/esl-classroom-learners-perceptions.html",
+
+  {
+    id: "post_dalit_2020",
+    title: "The Life Story of a Dalit \u2014 A Poem to be Re-written",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2020, 7, 16),
+    source: "https://pityparker.blogspot.com/2020/08/the-life-story-of-dalit-poem-to-be-re.html",
+
+  {
+    id: "post_surrealism_2020",
+    title: "\u0c05\u0c27\u0c3f\u0c35\u0c3e\u0c38\u0c4d\u0c24\u0c35\u0c3f\u0c15\u0c24 (\u0c38\u0c30\u0c4d\u0c30\u0c3f\u0c2f\u0c32\u0c3f\u0c1c\u0c02)",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2020, 10, 27),
+    source: "https://pityparker.blogspot.com/2020/11/blog-post_27.html",
+
+  {
+    id: "post_gaddam_2020",
+    title: "\u0c17\u0c21\u0c4d\u0c21\u0c02 \u2014 \u0c13 \u0c38\u0c4a\u0c32\u0c4d\u0c32\u0c41 \u0c2a\u0c41\u0c30\u0c3e\u0c23\u0c02",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2020, 10, 2),
+    source: "https://pityparker.blogspot.com/2020/11/blog-post.html",
+
+  {
+    id: "post_humdekhenge_2020",
+    title: "HUM DEKHENGE in Telugu \u2014 Faiz Ahmed Faiz | \u0c2e\u0c47\u0c2e\u0c41 \u0c1a\u0c42\u0c38\u0c4d\u0c24\u0c3e\u0c2e\u0c41",
+    dek: "",
+    genre: "Note",
+    lang: "en",
+    date: Date.UTC(2020, 0, 15),
+    source: "https://pityparker.blogspot.com/2020/01/blog-post_15.html"
+
+
